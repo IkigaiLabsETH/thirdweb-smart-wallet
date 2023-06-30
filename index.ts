@@ -12,8 +12,8 @@ import {
 
 config();
 
-const chain = Goerli;
-const factoryAddress = "0xaB15553D83b47cac2DDfD8D4753D740e69930834";
+const chain = Mumbai;
+const factoryAddress = "0xf14C4Bc3318d6879Ba973eA8BcC8851a46811aA2";
 const thirdwebApiKey = process.env.THIRDWEB_API_KEY as string;
 
 const main = async () => {
@@ -72,7 +72,7 @@ const main = async () => {
 
   // Claim a ERC20 token
   const contract = await sdk.getContract(
-    "0xc54414e0E2DBE7E9565B75EFdC495c7eD12D3823" // TokenDrop on goerli
+    "0x52f98feE8D7A5f3045906fBD6d801BB93Ed250E7" // TokenDrop on mumbai
   );
   const tokenBalance = await contract.erc20.balance();
   console.log("ERC20 token balance:", tokenBalance.displayValue);
